@@ -17,6 +17,10 @@ correct_result_as_example = [
 # result = [(i, j) for i, j in zip(result_order, result_total_value)]
 # print(result)
 
-result = [(i, j) for i, j in zip(list(map(lambda x: x[0], lst)), list(
-    map(lambda x: round(x[2] * x[3]) + 10 if round(x[2] * x[3]) < 100 else round(x[2] * x[3]), lst)))]
-print(result)
+# result = [(i, j) for i, j in zip(list(map(lambda x: x[0], lst)), list(
+#     map(lambda x: round(x[2] * x[3]) + 10 if round(x[2] * x[3]) < 100 else round(x[2] * x[3]), lst)))]
+# print(result)
+
+
+res = list(map(lambda x: (x[0], round(x[2] * x[3]) + 10 if round(x[2] * x[3]) < 100 else round(x[2] * x[3])), lst))
+print(res)
