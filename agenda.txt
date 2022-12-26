@@ -1,0 +1,50 @@
+23/12/2022
+HTTP
+SQL
+Flask
+
+
+
+HTTP - Hyper Text Transport Protocol (HTTPS)
+FTP
+
+request ----> server
+server -----> response
+
+REQUEST
+starting line: GET, route, version
+header
+body
+
+GET /search HTTP/1.1
+Host: www.google.com
+
+RESPONSE
+starting line: version, code, status
+header
+body
+
+HTTP/1.1    200     OK
+Data: Mon, 02 January 2011 23:34:59
+
+Methods:
+    GET - get data from server;
+    HEAD - same as 'GET' but in the response u will not find the BODY;
+    POST - data to server;
+    PUT - update the current data on the server;
+    PATH - update only the "part/field/table" from the data;
+    DELETE - delete;
+
+CODE:
+    100 - 199 ---> Information codes;
+    200 - 299 ---> GOOD RESPONSE;   200 or 204
+    300 - 399 ---> Redirect to another server;
+    400 - 499 ---> SUCK RESPONSE / BAD RESPONSE "Bad request"   404 Page not found
+    500 - 599 ---> The mistakes on the servers;     500 Internal Error
+
+
+Headers:
+    1. General Headers
+    2. Request Headers
+    3. Response Headers
+    4. Entity Headers
