@@ -12,6 +12,8 @@ class DigitalCounter:
         self.__start = start  # Protected
         self.__end = end  # Protected
         self.current = current
+        if self.current is None:
+            self.current = self.__start
 
     def increase(self):
 
@@ -21,10 +23,7 @@ class DigitalCounter:
             raise ValueError("Out of range")
 
     def get_current_value(self):
-        if self.current is None:
-            self.current = self.__start
-            return self.current
-        elif self.current < 0:
+        if self.current < 0:
             raise ValueError("Work with Positive Numbers Only")
         else:
             return self.current
@@ -33,26 +32,27 @@ class DigitalCounter:
 a = DigitalCounter()
 print(a.get_current_value())
 a.increase()
-a.increase()
-a.increase()
-a.increase()
-a.increase()
-a.increase()
-a.increase()
-a.increase()
-a.increase()
-a.increase()
 print(a.get_current_value())
-a.current = 95
-print(a.get_current_value())
-a.increase()
-print(a.get_current_value())
-a.increase()
-print(a.get_current_value())
-a.increase()
-a.increase()
-print(a.get_current_value())
-a.increase()
-print(a.get_current_value())
-a.increase()
-print(a.get_current_value())
+# a.increase()
+# a.increase()
+# a.increase()
+# a.increase()
+# a.increase()
+# a.increase()
+# a.increase()
+# a.increase()
+# a.increase()
+# print(a.get_current_value())
+# a.current = 95
+# print(a.get_current_value())
+# a.increase()
+# print(a.get_current_value())
+# a.increase()
+# print(a.get_current_value())
+# a.increase()
+# a.increase()
+# print(a.get_current_value())
+# a.increase()
+# print(a.get_current_value())
+# a.increase()
+# print(a.get_current_value())
